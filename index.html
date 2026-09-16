@@ -1,0 +1,689 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRF IPUN</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-cross"></i>
+        </div>
+
+        <div>
+            <h2>CASA DE RESTAURACIÓN FAMILIAR</h2>
+            <span>iglesia pentecostal unida nacional</span>
+        </div>
+    </div>
+
+    <nav id="nav">
+
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#ofrendas">Ofrendas</a>
+        <a href="#contacto">Contacto</a>
+
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="inicio" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="small-title">
+            BIENVENIDOS
+        </span>
+
+        <h1>
+            Una fé<br>
+            Un Señor<br>
+            <span>Un bautizmo en el nombre de Jesucristo</span>
+        </h1>
+
+        <p>
+            Somos una iglesia con doctroninca apostolica, y avivamiento pentecostal.
+            Nuestra doctrinca 100% biblica basada en la iglesia primitiva, basados en la
+            iglesia de los echos de los apostoles, creemos en la llenura del Espíritu Santo,
+            en el don de lenguas, y en el poder de Jesucristo para dar sanidad a los enfermos.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#nosotros" class="btn btn-primary">
+                Conócenos
+            </a>
+
+            <a href="#eventos" class="btn btn-outline">
+                Ver eventos
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUIENES SOMOS ================= -->
+
+<section id="nosotros" class="section">
+
+    <div class="section-title">
+
+        <span>CONÓCENOS</span>
+
+        <h2>¿Quiénes somos?</h2>
+
+        <p>
+            Una comunidad de fe comprometida con Dios,
+            su Palabra y el servicio a las personas.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <article class="info-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-church"></i>
+            </div>
+
+            <h3>Nuestra iglesia</h3>
+
+            <p>
+                Somos una iglesia cristiana dedicada a proclamar
+                el evangelio de Jesucristo y formar discípulos.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+            <h3>Nuestra misión</h3>
+
+            <p>
+                Llevar el mensaje de salvación, fortalecer las familias
+                y ayudar a las personas a crecer en su relación con Dios.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <h3>Nuestra visión</h3>
+
+            <p>
+                Restauración familias para Cristo, 
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DOCTRINA ================= -->
+
+<section class="doctrine">
+
+    <div class="doctrine-content">
+
+        <div>
+
+            <span class="small-title">
+                NUESTRA FE
+            </span>
+
+            <h2>
+                Nuestra doctrina Unicitaria
+            </h2>
+
+            <p>
+                La doctrina unicitaria enseña que Dios es uno, sin distinción de personas. 
+                Se manifiesta en tres modos: Padre en la creación, Hijo en la redención y
+                Espíritu Santo en la regeneración. Bautismo por inmersión solo en el nombre de Jesús,
+                Bautismo en el Espíritu Santo (hablar en lenguas como evidencia), Énfasis en santidad práctica
+                y dones carismáticos
+            </p>
+
+        </div>
+
+
+        <div class="doctrine-list">
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                <span>La Biblia como Palabra de Dios</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                <span>La salvación por medio de Jesucristo</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                <span>La importancia de la oración</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                <span>El poder transformador del Espíritu Santo</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                <span>La predicación del evangelio</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EVENTOS ================= -->
+
+<section id="eventos" class="section">
+
+    <div class="section-title">
+
+        <span>PARTICIPA</span>
+
+        <h2>Próximos eventos</h2>
+
+        <p>
+            Consulta las próximas actividades de nuestra iglesia.
+        </p>
+
+    </div>
+
+
+    <div class="event-filters">
+
+        <button class="filter active" onclick="filterEvents('todos')">
+            Todos
+        </button>
+
+        <button class="filter" onclick="filterEvents('local')">
+            Local
+        </button>
+
+        <button class="filter" onclick="filterEvents('distrital')">
+            Distrital
+        </button>
+
+        <button class="filter" onclick="filterEvents('nacional')">
+            Nacional
+        </button>
+
+    </div>
+
+
+    <div class="events">
+
+        <!-- EVENTO -->
+
+        <article class="event-card local">
+
+            <div class="event-date">
+
+                <strong>25</strong>
+                <span>OCT</span>
+
+            </div>
+
+            <div class="event-info">
+
+                <span class="event-type">
+                    LOCAL
+                </span>
+
+                <h3>
+                    Servicio familiar y jovenes
+                </h3>
+
+                <p>
+                    Predicador invitado: Pastor Waldo Espinoza.
+
+                    De la primera iglesia de Tijuana IPUN
+                </p>
+
+                <small>
+                    <i class="fa-regular fa-clock"></i>
+                    10:00 am y 4:00 pm
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <article class="event-card distrital">
+
+            <div class="event-date">
+
+                <strong>28</strong>
+                <span>OCT</span>
+
+            </div>
+
+            <div class="event-info">
+
+                <span class="event-type">
+                    Local
+                </span>
+
+                <h3>
+                    Servicio especial de damas
+                </h3>
+
+                <p>
+                    Predicadora: hna. Magali Mejia
+                </p>
+
+                <small>
+                    <i class="fa-solid fa-location-dot"></i>
+                    7:00 pm
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <article class="event-card nacional">
+
+            <div class="event-date">
+
+                <strong>15</strong>
+                <span>NOV</span>
+
+            </div>
+
+            <div class="event-info">
+
+                <span class="event-type">
+                    NACIONAL
+                </span>
+
+                <h3>
+                    Convención Nacional
+                </h3>
+
+                <p>
+                    Un tiempo de comunión, enseñanza
+                    y adoración.
+                </p>
+
+                <small>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Próximamente
+                </small>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HORARIOS ================= -->
+
+<section id="horarios" class="schedule">
+
+    <div class="section-title light">
+
+        <span>TE ESPERAMOS</span>
+
+        <h2>Horarios de servicios</h2>
+
+        <p>
+            Aparta un tiempo para estar en la presencia de Dios.
+        </p>
+
+    </div>
+
+
+    <div class="schedule-grid">
+
+        <div class="schedule-card">
+
+            <i class="fa-solid fa-book-bible"></i>
+
+            <h3>Miércoles</h3>
+
+            <strong>7:00 PM</strong>
+
+            <p>
+                Servicio de Damas dorcas
+            </p>
+
+        </div>
+
+
+        <div class="schedule-card">
+
+            <i class="fa-solid fa-fire"></i>
+
+            <h3>Viernes</h3>
+
+            <strong>7:00 PM</strong>
+
+            <p>
+                Servicio de oración
+            </p>
+
+        </div>
+
+
+        <div class="schedule-card">
+
+            <i class="fa-solid fa-church"></i>
+
+            <h3>Domingo</h3>
+
+            <strong>10:00 AM</strong>
+
+            <p>
+                Servicio Evangelistico
+            </p>
+
+            <strong>6:00 PM</strong>
+
+            <p>
+                Servicio de jovenes
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFRENDAS ================= -->
+
+<section id="ofrendas" class="section offerings">
+
+    <div class="section-title">
+
+        <span>GENEROSIDAD</span>
+
+        <h2>Ofrendas y diezmos</h2>
+
+        <p>
+            Nuestra administración financiera busca servir
+            a Dios y apoyar la misión de la iglesia.
+        </p>
+
+    </div>
+
+
+    <div class="offerings-grid">
+
+        <div class="offering-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+
+            <h3>Ofrendas</h3>
+
+            <p>
+                Las ofrendas contribuyen al desarrollo de las
+                actividades y proyectos de la iglesia.
+            </p>
+
+        </div>
+
+
+        <div class="offering-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-coins"></i>
+            </div>
+
+            <h3>Diezmos</h3>
+
+            <p>
+                Los diezmos forman parte de nuestra práctica
+                de obediencia y administración de los recursos.
+            </p>
+
+        </div>
+
+
+        <div class="offering-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>Proyectos e inversiones</h3>
+
+            <p>
+                Los recursos también pueden destinarse a
+                proyectos, infraestructura, evangelismo y expansión.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="transparency">
+
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <div>
+
+            <h3>Transparencia</h3>
+
+            <p>
+                Queremos que cada recurso sea administrado
+                responsablemente para cumplir los propósitos
+                de la iglesia.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VERSICULO ================= -->
+
+<section class="verse">
+
+    <div>
+
+        <i class="fa-solid fa-quote-left"></i>
+
+        <p>
+            "Mas buscad primeramente el reino de Dios
+            y su justicia, y todas estas cosas os serán añadidas."
+        </p>
+
+        <span>
+            Mateo 6:33
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
+
+<section id="contacto" class="section contact">
+
+    <div class="section-title">
+
+        <span>ESTAMOS PARA SERVIRTE</span>
+
+        <h2>Contáctanos</h2>
+
+        <p>
+            Será un gusto recibirte y conocerte.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-info">
+
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+                    <h3>Ubicación</h3>
+                    <p>Abasolo #410 col. Centro, Cadereyta Jimenez N.L.</p>
+                </div>
+            </div>
+
+
+            <div>
+                <i class="fa-solid fa-phone"></i>
+
+                <div>
+                    <h3>Teléfono</h3>
+                    <p>8282479917</p>
+                </div>
+            </div>
+
+
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>crfipun@gmail.com</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <form class="contact-form">
+
+            <input type="text"
+                   placeholder="Tu nombre"
+                   required>
+
+            <input type="email"
+                   placeholder="Tu correo"
+                   required>
+
+            <textarea
+                   placeholder="Escribe tu mensaje..."
+                   rows="5"
+                   required></textarea>
+
+            <button class="btn btn-primary">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h2>MI IGLESIA</h2>
+
+            <p>
+                Una familia en Cristo.
+            </p>
+
+        </div>
+
+
+        <div class="social">
+
+            <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Mi Iglesia. Todos los derechos reservados.
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

@@ -1,0 +1,924 @@
+```css
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #1b1b1b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(10, 10, 15, 0.92);
+    backdrop-filter: blur(15px);
+
+    color: white;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #c9a227;
+    color: white;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+.logo h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-size: 11px;
+    color: #c9a227;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 14px;
+    color: #eee;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c9a227;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 24px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 7%;
+
+    background:
+        linear-gradient(
+            rgba(5, 7, 15, .78),
+            rgba(5, 7, 15, .88)
+        ),
+        url("https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 720px;
+    color: white;
+}
+
+.small-title {
+    display: inline-block;
+
+    color: #c9a227;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 85px);
+    line-height: 1.02;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #c9a227;
+}
+
+.hero p {
+    max-width: 600px;
+
+    color: #ddd;
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 27px;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #c9a227;
+    color: #111;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(201, 162, 39, .3);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.5);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section {
+    padding: 110px 7%;
+}
+
+.section-title {
+    max-width: 700px;
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.section-title > span {
+    color: #c9a227;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin: 10px 0 15px;
+}
+
+.section-title p {
+    color: #777;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.info-card,
+.offering-card {
+    padding: 40px 30px;
+
+    background: #fff;
+
+    border: 1px solid #eee;
+
+    border-radius: 20px;
+
+    transition: .3s;
+}
+
+.info-card:hover,
+.offering-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.08);
+}
+
+.card-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 15px;
+
+    background: #f7f1df;
+    color: #c9a227;
+
+    font-size: 23px;
+}
+
+.info-card h3,
+.offering-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 21px;
+}
+
+.info-card p,
+.offering-card p {
+    color: #777;
+}
+
+
+/* =========================
+   DOCTRINA
+========================= */
+
+.doctrine {
+    padding: 100px 7%;
+
+    background: #0b0c12;
+    color: white;
+}
+
+.doctrine-content {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.doctrine h2 {
+    font-size: 55px;
+
+    margin: 10px 0 20px;
+}
+
+.doctrine p {
+    color: #aaa;
+    max-width: 500px;
+}
+
+.doctrine-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.doctrine-list div {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border: 1px solid #252631;
+
+    border-radius: 12px;
+
+    color: #ddd;
+}
+
+.doctrine-list i {
+    color: #c9a227;
+}
+
+
+/* =========================
+   EVENTOS
+========================= */
+
+.event-filters {
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+.filter {
+    padding: 10px 20px;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.filter:hover,
+.filter.active {
+    background: #c9a227;
+    border-color: #c9a227;
+}
+
+.events {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.event-card {
+    padding: 25px;
+
+    display: flex;
+    gap: 20px;
+
+    border: 1px solid #eee;
+
+    border-radius: 18px;
+
+    transition: .3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.07);
+}
+
+.event-date {
+    min-width: 65px;
+    height: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #f7f1df;
+
+    border-radius: 12px;
+
+    color: #9b7810;
+}
+
+.event-date strong {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.event-date span {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.event-type {
+    color: #c9a227;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.event-info h3 {
+    margin: 5px 0 8px;
+}
+
+.event-info p {
+    font-size: 14px;
+    color: #777;
+
+    margin-bottom: 10px;
+}
+
+.event-info small {
+    color: #777;
+}
+
+
+/* =========================
+   HORARIOS
+========================= */
+
+.schedule {
+    padding: 110px 7%;
+
+    background:
+        linear-gradient(
+            rgba(8,9,15,.95),
+            rgba(8,9,15,.95)
+        ),
+        url("https://images.unsplash.com/photo-1519491050282-cf00c82424b4?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+
+    color: white;
+}
+
+.light p {
+    color: #aaa;
+}
+
+.schedule-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.schedule-card {
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background: rgba(255,255,255,.05);
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+}
+
+.schedule-card i {
+    color: #c9a227;
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+.schedule-card h3 {
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.schedule-card strong {
+    display: block;
+
+    color: #c9a227;
+
+    font-size: 25px;
+}
+
+.schedule-card p {
+    color: #aaa;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   OFRENDAS
+========================= */
+
+.offerings-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.transparency {
+    max-width: 900px;
+
+    margin: 50px auto 0;
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    padding: 25px;
+
+    background: #fafafa;
+
+    border-radius: 15px;
+}
+
+.transparency > i {
+    font-size: 30px;
+
+    color: #c9a227;
+}
+
+.transparency p {
+    color: #777;
+}
+
+
+/* =========================
+   VERSÍCULO
+========================= */
+
+.verse {
+    padding: 100px 7%;
+
+    text-align: center;
+
+    background: #c9a227;
+
+    color: #111;
+}
+
+.verse div {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.verse i {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.verse p {
+    font-family: Georgia, serif;
+
+    font-size: clamp(25px, 4vw, 40px);
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+}
+
+.verse span {
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.contact-info > div {
+    display: flex;
+
+    gap: 18px;
+}
+
+.contact-info i {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f7f1df;
+
+    color: #c9a227;
+
+    border-radius: 12px;
+}
+
+.contact-info h3 {
+    margin-bottom: 3px;
+}
+
+.contact-info p {
+    color: #777;
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #c9a227;
+}
+
+.contact-form button {
+    border: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 7% 20px;
+
+    background: #090a0f;
+
+    color: white;
+}
+
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.footer-content h2 {
+    letter-spacing: 2px;
+}
+
+.footer-content p {
+    color: #888;
+}
+
+.social {
+    display: flex;
+
+    gap: 10px;
+}
+
+.social a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #191a20;
+
+    transition: .3s;
+}
+
+.social a:hover {
+    background: #c9a227;
+    color: #111;
+}
+
+.copyright {
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #222;
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        position: absolute;
+
+        top: 82px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        background: #0b0c12;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .cards,
+    .events,
+    .schedule-grid,
+    .offerings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctrine-content,
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .doctrine h2 {
+        font-size: 45px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .section,
+    .schedule,
+    .doctrine {
+        padding: 80px 5%;
+    }
+
+    .hero {
+        padding: 120px 5% 80px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        width: 65px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+}
+```
